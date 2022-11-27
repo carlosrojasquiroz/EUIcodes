@@ -211,60 +211,6 @@ saveas(gcf,'PermTP_Y','epsc')
 %---------------------------------------------------------------------------------------------------------------------------
 figure(16)
 plot(time,[permZ.r(1)*ones(1,6) transZ.r], 'LineWidth',LW+1)
-xlabel('Time','fontsize',FS,'interpreter','latex')
-ylabel('Interest rate','fontsize',FS,'interpreter','latex')
-xlim([-5 p.ntt])
-grid on
-ax = gca;
-ax.FontSize = 16;
-saveas(gcf,'TransTP_r','epsc')
-
-figure(17)
-plot(time,[permZ.w(1)*ones(1,6) transZ.w], 'LineWidth',LW+1)
-xlabel('Time','fontsize',FS,'interpreter','latex')
-ylabel('Wages','fontsize',FS,'interpreter','latex')
-xlim([-5 p.ntt])
-grid on
-ax = gca;
-ax.FontSize = 16;
-saveas(gcf,'TransTP_w','epsc')
-
-figure(18)
-plot(time,[permZ.Kh(1)*ones(1,6) transZ.Kh], 'LineWidth',LW+1)
-xlabel('Time','fontsize',FS,'interpreter','latex')
-ylabel('Capital','fontsize',FS,'interpreter','latex')
-xlim([-5 p.ntt])
-grid on
-ax = gca;
-ax.FontSize = 16;
-saveas(gcf,'TransTP_Kh','epsc')
-
-figure(19)
-plot(time,[permZ.C(1)*ones(1,6) transZ.C], 'LineWidth',LW+1)
-xlabel('Time','fontsize',FS,'interpreter','latex')
-ylabel('Consumption','fontsize',FS,'interpreter','latex')
-xlim([-5 p.ntt])
-grid on
-ax = gca;
-ax.FontSize = 16;
-saveas(gcf,'TransTP_C','epsc')
-
-figure(20)
-plot(time,[permZ.Y(1)*ones(1,6) transZ.Y], 'LineWidth',LW+1)
-xlabel('Time','fontsize',FS,'interpreter','latex')
-ylabel('Output','fontsize',FS,'interpreter','latex')
-xlim([-5 p.ntt])
-grid on
-ax = gca;
-ax.FontSize = 16;
-saveas(gcf,'TransTP_Y','epsc')
-%---------------------------------------------------------------------------------------------------------------------------
-%% Jacobians
-%---------------------------------------------------------------------------------------------------------------------------
-% Transitory shock
-%---------------------------------------------------------------------------------------------------------------------------
-figure(21)
-plot(time,[permZ.r(1)*ones(1,6) transZ.r], 'LineWidth',LW+1)
 hold on;
 plot(time,[permZ.r(1)*ones(1,6) transSSJ.r], 'LineWidth',LW+1)
 xlabel('Time','fontsize',FS,'interpreter','latex')
@@ -277,7 +223,7 @@ ax = gca;
 ax.FontSize = 16;
 saveas(gcf,'TransTP_r','epsc')
 
-figure(22)
+figure(17)
 plot(time,[permZ.w(1)*ones(1,6) transZ.w], 'LineWidth',LW+1)
 hold on;
 plot(time,[permZ.w(1)*ones(1,6) transSSJ.w], 'LineWidth',LW+1)
@@ -291,7 +237,7 @@ ax = gca;
 ax.FontSize = 16;
 saveas(gcf,'TransTP_w','epsc')
 
-figure(23)
+figure(18)
 plot(time,[permZ.Kh(1)*ones(1,6) transZ.Kh], 'LineWidth',LW+1)
 hold on;
 plot(time,[permZ.Kh(1)*ones(1,6) transSSJ.Kh], 'LineWidth',LW+1)
@@ -305,7 +251,7 @@ ax = gca;
 ax.FontSize = 16;
 saveas(gcf,'TransTP_Kh','epsc')
 
-figure(24)
+figure(19)
 plot(time,[permZ.C(1)*ones(1,6) transZ.C], 'LineWidth',LW+1)
 hold on;
 plot(time,[permZ.C(1)*ones(1,6) transSSJ.C], 'LineWidth',LW+1)
@@ -319,7 +265,7 @@ ax = gca;
 ax.FontSize = 16;
 saveas(gcf,'TransTP_C','epsc')
 
-figure(25)
+figure(20)
 plot(time,[permZ.Y(1)*ones(1,6) transZ.Y], 'LineWidth',LW+1)
 hold on;
 plot(time,[permZ.Y(1)*ones(1,6) transSSJ.Y], 'LineWidth',LW+1)
