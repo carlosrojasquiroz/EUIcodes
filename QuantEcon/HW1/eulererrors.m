@@ -1,26 +1,19 @@
 function EE=eulererrors(g_a,p,m)
-    a_intp=linspace(p.Amin,p.Amax,p.intp);
-    c=zeros(p.nzz,p.intp);
-    Uc=zeros(p.nzz,p.intp);
-    EUc=zeros(p.nzz,p.intp);
-    EE=zeros(p.nzz,p.intp);
-    g_a_intp=zeros(p.nzz,p.intp);
-    for j=1:p.nzz % productivity    
-    g_a_intp(j,:)=interp1(m.a_grid,g_a(j,:),a_intp,'linear','extrap');
+a_intp=exp(linspace(log(p.Amin+1),log(p.Amax+1),p.intp))-1;
+EE=zeros(p.nzz,p.intp);
+for z_i=1:p.nzz % productivity                        
+    for a_i=1:p.intp % current assets
+    ap=interp1(m.a_grid,g_a(z_i,:),a_intp(a_i),'linear');
+    c=m.z_grid(z_i)*p.w+(1+p.r)*a_intp(a_i)-ap;
+    uc=Uc(c,p.sigma);
+    
+    Euc=0;
+    for zp_i=1:p.nzz % productivity
+        app=interp1(m.a_grid,g_a(zp_i,:),ap,'linear');
+        cp=m.z_grid(zp_i)*p.w+(1+p.r)*ap-app;
+        Euc=m.Pi(z_i,zp_i)*Uc(cp,p.sigma)+Euc;
     end
-    c_aux=p.w*m.z_grid'+p.r*a_intp;
-    distC=1;
-    while distC>p.tol
-        for j=1:p.nzz % productivity                        
-            for i=1:p.intp % current assets
-                EUc(j,i)= m.Pi(j,:)*c_aux(:,i).^(-p.sigma);
-                c(j,i)=m.z_grid(j)*p.w + (1+p.r)*a_intp(i) - g_a_intp(j,i);
-                Uc(j,i)=c(j,i)^(-p.sigma);
-                EE(j,i)=(1+p.r)*p.beta*EUc(j,i)/Uc(j,i)-1;
-            end
-        end
-        distC=max(max(abs(c-c_aux)));
-        c_aux=c;
+
+    EE(z_i,a_i)=(1+p.r)*p.beta*Euc/uc-1;
     end
-    EE=log(abs(EE));
 end
