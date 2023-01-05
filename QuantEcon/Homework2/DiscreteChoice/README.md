@@ -1,6 +1,6 @@
-# Standard incomplete markets model with discrete choice
+# Standard incomplete markets model with discrete choices
 
-The `master.m` file computes the policy functions (assets, consumption and labor) in a model of incomplete markets with discrete choice. 
+The `master.m` file computes the policy functions (assets, consumption and labor) in a model of incomplete markets with discrete choices. 
 Consumer decides each period whether she participates in the labor market or not. To obtain "smooth" policy functions, I also include extreme value taste shocks, following Iskhakov et al. (2017).
 Consumer problem is as follows:
 
