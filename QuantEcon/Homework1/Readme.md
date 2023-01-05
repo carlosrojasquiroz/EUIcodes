@@ -1,6 +1,6 @@
 # Standard incomplete markets model (Aiyagari)
 
-The `master.m` file computes policy functions (assets and consumption) and solve a model of incomplete markets *a la* Aiyagari. It also computes the Euler equation error in the partial equilibrium solution. Consumer problem is as follows:
+The `master.m` file computes policy functions (assets and consumption) and solves a model of incomplete markets *a la* Aiyagari. It also computes Euler equation errors in the partial equilibrium solution for each idiosyncratic shock. Consumer problem is as follows:
 
 $$
 \max_{ \left\lbrace c_t \right\rbrace } \mathbb{E} \sum_{t=0}^{\infty} \beta^t \left\( u(c_t) \right)
