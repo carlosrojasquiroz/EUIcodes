@@ -26,6 +26,6 @@ $$
 \max_{K,L} \left\lbrace ZK_t^{\alpha}L_t^{1-\alpha} - (r+\delta)K_t - w L_t  \right\rbrace
 $$
 
-The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \alpha=0.33, \ \delta=0.05, and the number of assets grid point is set as $n_{aa}=200$. Moreover, there are two idiosyncratic productivity levels $(z_1, z_2) = (0.1, 1.0)$. Finally, utility function has a CRRA form. 
+The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \alpha=0.33, \ \delta=0.05$, and the number of assets grid point is set as $n_{aa}=200$. Moreover, there are two idiosyncratic productivity levels $(z_1, z_2) = (0.1, 1.0)$. Finally, utility function has a CRRA form. 
 
 The model is solved by endogenous grid method. The `master.m` file also plots figures of the value and policy functions, distribution of assets, the Euler equation errors and the market for capital. If you want to deactivate this option then set `p.fig=0` in the script `parameters.m`.
