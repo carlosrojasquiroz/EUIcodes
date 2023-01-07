@@ -1,6 +1,6 @@
 function mu=stationarydist(p,nn,Pi,intp)
 %---------------------------------------------------------------------------------------------------------------------------
-% This function obtains the stationary distribution of assets
+% This function obtains the stationary distribution from the transition matrix 'Pi'. 
 %---------------------------------------------------------------------------------------------------------------------------
 mu0=(1/(nn*intp))*ones(1,nn*intp); 
 err=1;
@@ -12,3 +12,4 @@ while err> p.tol && iter<p.maxiter
    iter=iter+1;
 end
 mu=reshape(mu0,nn,intp);
+%---------------------------------------------------------------------------------------------------------------------------
