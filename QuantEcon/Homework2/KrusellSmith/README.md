@@ -30,7 +30,17 @@ The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \alpha=0.33, 
 
 Policy functions are obtained by endogenous grid method and the model is solved by nonstochastic simulation *a la* Young. The `master.m` file also plots figures of the distribution of assets, time series of capital, productivity, and prices; and the DenHaan' test.  If you want to deactivate this option then set `p.fig=0` in the script `parameters.m`. 
 
-This code follows closely Maliar, Maliar, and Valli (2010, JEDC).
+## References
+
+This code follows closely Maliar, Maliar, and Valli (2010, JEDC), but with some differences. For instance: 
+- Instead of using the initial distribution of assets proposed in MMV, I use the distribution from the solution of Aiyagari's model without aggregate uncertainty.
+- The grid for aggregate capital is linearly-spaced, while for assets is log-spaced. The minimum and maximum values of aggregate capital are equal to $0.5 \times \bar{K}$ and $1.5 \times \bar{K}$, where $\bar{K}$ is the mean of capital obtained by the baseline model of Aiyagari without aggregate uncertainty. 
+- The number of assets grids point for getting the optimal policy functions is 200. It increases to 500 when I compute the nonstochastic simulation. 
+- The initial values of $\beta$ are equal to 
+
+$$
+\beta_0=[\log(\bar{K}) 0 \log(\bar{K}) 0]
+$$
 
 
 
