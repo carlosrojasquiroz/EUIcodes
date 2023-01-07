@@ -3,7 +3,7 @@ function p=parameters()
 % This function houses parameters of the model in the structure "p" 
 % (you can call it as whatever you want, but be careful of being coherent in the whole code)
 %---------------------------------------------------------------------------------------------------------------------------
-p.naa=1000; % # of asset grid points
+p.naa=5000; % # of asset grid points
 p.Amin=0; % borrowing limit
 p.Amax=10; % max level of assets
 p.sigma=1; % intertemporal elasticity of substitution
@@ -19,7 +19,7 @@ p.epsilon=0.01; % scale factor of the EV shock
 % the display of information from the code, and plotting some figures
 %---------------------------------------------------------------------------------------------------------------------------
 p.tol=1e-6; % tolerance criterion
-p.maxiter=500; % maximum # iterations in the algorithm
+p.maxiter=800; % maximum # iterations in the algorithm
 p.disp1=1; % disp1=1, displays the tolerance error and the time to execute the VFI
 p.fig=1; % fig=1, plots figures, 0 otherwise
 %---------------------------------------------------------------------------------------------------------------------------

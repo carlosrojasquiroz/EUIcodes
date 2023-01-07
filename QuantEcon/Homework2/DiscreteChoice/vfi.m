@@ -64,5 +64,6 @@ s.g_a=s.g_n.*m.a_grid(p1)+(1-s.g_n).*m.a_grid(p0);
 s.V=V;
 s.V1=V1;
 s.V0=V0;
-s.g_c=s.g_n.*p.w*m.z_grid+(1+p.r)*m.a_grid-s.g_a;
+%s.g_c=s.g_n.*p.w*m.z_grid+(1+p.r)*m.a_grid-s.g_a;
+s.g_c=s.g_n.*(p.w*m.z_grid+(1+p.r)*m.a_grid-s.g_a)+(1-s.g_n).*((1+p.r)*m.a_grid-s.g_a);
 %---------------------------------------------------------------------------------------------------------------------------
