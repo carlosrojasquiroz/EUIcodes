@@ -16,7 +16,7 @@ clc,close,clear;
 %---------------------------------------------------------------------------------------------------------------------------
 %% 3. Individual Policy and value functions
 %---------------------------------------------------------------------------------------------------------------------------
-        % Standard incomplete market
+        % Standard incomplete markets
         p.phi=0; p.evind=0; 
         s0=vfi(p,m);
         % Discrete choice
