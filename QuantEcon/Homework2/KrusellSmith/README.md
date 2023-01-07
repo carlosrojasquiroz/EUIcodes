@@ -30,7 +30,7 @@ The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \alpha=0.33, 
 
 Policy functions are obtained by endogenous grid method and the model is solved by nonstochastic simulation *a la* Young. The `master.m` file also plots figures of the distribution of assets, time series of capital, productivity, and prices; and the DenHaan' test.  If you want to deactivate this option then set `p.fig=0` in the script `parameters.m`. 
 
-## References
+## Details
 
 This code follows closely Maliar, Maliar, and Valli (2010, JEDC), but with some differences. For instance: 
 - Instead of using the initial distribution of assets proposed in MMV, I use the distribution from the solution of Aiyagari's model without aggregate uncertainty.
@@ -42,7 +42,7 @@ $$
 \beta_0=[\log(\bar{K}),0,\log(\bar{K}),0]
 $$
 
-On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV. It is important to highlight that I also took as references lectures notes from Makoto Nakajima, Toshihiko Mukoyama and Johannes Wieland, as well as files and documentation of the "JEDC comparison project" from Wouter J. den Haan's website. 
+On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV. It is important to highlight that I also took as references lectures notes from Makoto Nakajima, Toshihiko Mukoyama (see folder PDFs) and Johannes Wieland, as well as files and documentation of the "JEDC comparison project" from [Wouter J. den Haan's website]([https://link-url-here.org](http://www.wouterdenhaan.com/datasuite.htm)), codes in Julia from [Mark Ponder](https://mark-ponder.com/tutorials/heterogeneous-agents-with-aggregate-risk-krusell-smith/) and [Shunsuke Hori (QuantEcon)](https://notes.quantecon.org/submission/5bb58d1e11611400157fdc8d). 
 
 
 ## Matrix of transition probabilities
