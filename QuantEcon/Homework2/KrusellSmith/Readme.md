@@ -28,5 +28,5 @@ $$
 
 The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \alpha=0.33, \ \delta=0.05$, and the number of assets grid point is set as $n_{aa}=200$. Moreover, there are two idiosyncratic productivity levels $(z_1, z_2) = (0.1, 1.0)$ and two aggregate productivity shocks $(Z_1, Z_2) = (0.99, 1.01)$, each one with the corresponding transition matrix. Finally, utility function has a CRRA form. 
 
-Policy functions are obtained by endogenous grid method and the model is solved by nonstochastic simulation *a la* Young. The `master.m` file also plots figures of the distribution of assets, time series of capital, productivity, and prices; and the DenHaan' test.  If you want to deactivate this option then set `p.fig=0` in the script `parameters.m`.
+Policy functions are obtained by endogenous grid method and the model is solved by nonstochastic simulation *a la* Young. The `master.m` file also plots figures of the distribution of assets, time series of capital, productivity, and prices; and the DenHaan' test.  If you want to deactivate this option then set `p.fig=0` in the script `parameters.m`. This code follows closely Maliar, Maliar, and Valli (2010, JEDC).
 
