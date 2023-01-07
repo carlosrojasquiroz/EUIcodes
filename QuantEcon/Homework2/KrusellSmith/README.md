@@ -47,7 +47,7 @@ On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficien
 
 ## Matrix of transition probabilities
 
-The matrix of transition probabilities, $\Pi$, contains probabilities of aggregate and idiosyncratic shocks in the future, given the current state. For instance, $\Pi(1,1)=P_{LL^{\prime}ll^{\prime}}$ is the probability of facing low aggregate and idiosyncratic shocks the next period, given that today the economy faces low aggregate and idiosyncratic shocks, while $\Pi(3,2) is the probability of having  
+The matrix of transition probabilities, $\Pi$, contains probabilities of aggregate and idiosyncratic shocks in the future, given the current state. For instance, $\Pi(1,1)=P_{LL^{\prime}ll^{\prime}}$ is the probability of facing low aggregate and idiosyncratic shocks the next period, given that today the economy faces low aggregate and idiosyncratic shocks, while $\Pi(3,2)=P_{HL^{\prime}lh^{\prime}}$ is the probability of having   low aggregate and high idiosyncratic shocks the next period, given that today the economy faces high aggregate and low idiosyncratic productivity shocks.
 
 $$
 \Pi
