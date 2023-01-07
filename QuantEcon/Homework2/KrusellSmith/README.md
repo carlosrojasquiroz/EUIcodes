@@ -34,7 +34,7 @@ Policy functions are obtained by endogenous grid method and the model is solved 
 
 This code follows closely Maliar, Maliar, and Valli (2010, JEDC), but with some differences. For instance: 
 - Instead of using the initial distribution of assets proposed in MMV, I use the distribution from the solution of Aiyagari's model without aggregate uncertainty.
-- The grid for aggregate capital is linearly-spaced, while for assets is log-spaced. The minimum and maximum values of aggregate capital are equal to $0.5 \times \bar{K}$ and $1.5 \times \bar{K}$, where $\bar{K}$ is the mean of capital from the baseline model of Aiyagari without aggregate uncertainty. 
+- The grid for aggregate capital is linearly-spaced, while for assets is log-spaced. The minimum and maximum values of aggregate capital are equal to $0.5 \times \bar{K}$ and $1.5 \times \bar{K}$, respectively, where $\bar{K}$ is the mean of capital from the baseline model of Aiyagari without aggregate uncertainty. 
 - The number of assets grids points for getting the optimal policy functions is 200. It increases to 500 when I compute the nonstochastic simulation. 
 - The initial values of $\beta$ are equal to: 
 
