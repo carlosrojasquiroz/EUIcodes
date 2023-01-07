@@ -9,7 +9,7 @@ $$
 subject to:
 
 $$
-a_{t+1} + c_t = w_t z_t + (1+r_t) a_t
+a_{t+1} + c_t = w z_t + (1+r) a_t
 $$
 
 $$
