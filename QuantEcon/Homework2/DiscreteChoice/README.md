@@ -40,11 +40,18 @@ This code works with external functions `logsumexp.m` and `softmax.m`, written b
 
 ## Code
 
-Note that we can run three different models with the same code according with the calibration in the file `parameters.m`: 
+Note that we can run three different models with the same code according with the calibration in the file `parameters.m`:
+
 - If we set `p.phi=0` and `p.evind=0`, then we obtain policy functions from the standard incomplete markets model
-- If we set `p.phi>0` and `p.evind=0`, then we work with a model with incomplete markets and discrete choice on labor suuply
-- If we set `p.phi>0` and `p.evind=1`, then we add a extreme value (taste) shock to the previous problem
+- If we set `p.phi>0` and `p.evind=0`, then we work with a model with incomplete markets and discrete choice on labor supply
+- If we set `p.phi>0` and `p.evind=1`, then we add extreme value (taste) shocks to the previous problem
 
 ## Solution
 
-The algorithm took 9.1012 seconds to obtain a solution of the model (after 43 iterations). Solutions are saved in the object `DChoicesolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf` in the previous folder. 
+The algorithm took:
+
+- 19.6714 seconds to obtain policy functions (after 45 iterations) for the standard incomplete markets model
+- 108.8429 seconds to obtain policy functions (after 264 iterations) for model with incomplete markets and discrete choice on labor supply
+- 106.2008 seconds  to obtain policy functions (after 264 iterations) for model with extreme value (taste) shocks 
+
+Solutions are saved in the object `DChoicesolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf` in the previous folder. 
