@@ -42,7 +42,7 @@ $$
 \beta_0=[\log(\bar{K}),0,\log(\bar{K}),0]
 $$
 
-On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV. It is important to highlight that I also took as references lectures notes from Makoto Nakajima, Toshihiko Mukoyama and Johannes Wieland (see folder PDFs), as well as files and documentation of the "JEDC comparison project" of [Wouter J. den Haan](http://www.wouterdenhaan.com/datasuite.htm), codes in Julia from [Mark Ponder](https://mark-ponder.com/tutorials/heterogeneous-agents-with-aggregate-risk-krusell-smith/) and [Shunsuke Hori (QuantEcon)](https://notes.quantecon.org/submission/5bb58d1e11611400157fdc8d). 
+On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV. It is important to highlight that I also took as references lectures notes from Makoto Nakajima, Toshihiko Mukoyama and Johannes Wieland (see folder PDFs), as well as files and documentation of the "JEDC comparison project" of [Wouter J. den Haan](http://www.wouterdenhaan.com/datasuite.htm), and codes written in Julia from [Mark Ponder](https://mark-ponder.com/tutorials/heterogeneous-agents-with-aggregate-risk-krusell-smith/) and [Shunsuke Hori (QuantEcon)](https://notes.quantecon.org/submission/5bb58d1e11611400157fdc8d). 
 
 
 ## Matrix of transition probabilities
