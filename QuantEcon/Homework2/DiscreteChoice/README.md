@@ -31,4 +31,4 @@ The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \phi=0.75, \ 
 
 Policy functions are obtained by value function iteration. The `master.m` file also plots figures of the value and policy functions. If you want to deactivate this option then set `p.fig=0` in the file `parameters.m`.
 
-This code works with external functions `logsumexp.m` and `softmax.m`, written by Nick Highman (see [here](https://it.mathworks.com/matlabcentral/fileexchange/84892-logsumexp-softmax) ). 
+This code works with external functions `logsumexp.m` and `softmax.m`, written by Nick Highman (see [here](https://it.mathworks.com/matlabcentral/fileexchange/84892-logsumexp-softmax)). 
