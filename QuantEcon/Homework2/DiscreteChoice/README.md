@@ -40,7 +40,7 @@ This code works with external functions `logsumexp.m` and `softmax.m`, written b
 
 ## Code
 
-Note that we can run three different models with the same code according with the calibration in the file `parameters.m`:
+Note that we can run three different models with the same code according with the calibration in the structure`p`:
 
 - If we set `p.phi=0` and `p.evind=0`, then we obtain policy functions from the standard incomplete markets model
 - If we set `p.phi>0` and `p.evind=0`, then we work with a model with incomplete markets and discrete choice on labor supply
