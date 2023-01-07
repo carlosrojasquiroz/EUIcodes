@@ -1,8 +1,8 @@
 function A=gridspec(Amin,Amax,naa,gridform)
 %---------------------------------------------------------------------------------------------------------------------------
 % This function creates two different grid specifications for assets, given
-% the borrowing constraint and the maximum level calibrated in parameters
-% object. Note that Index is an indicator function such that:
+% the borrowing constraint and the calibration of the maximum level. Note that 'gridform'
+% is an indicator function such that:
 % gridform=0, linearly-spaced grid
 % gridform=1, log-spaced grid
 %---------------------------------------------------------------------------------------------------------------------------
@@ -16,3 +16,4 @@ else
     disp('p.gridform=1, log-spaced grid')
     A=NaN(1,naa);
 end
+%---------------------------------------------------------------------------------------------------------------------------
