@@ -1,5 +1,8 @@
 function [g_a,g_c]=egm_i(p,m,B,g_a)
 %---------------------------------------------------------------------------------------------------------------------------
+% This function obtains policy functions for assets and consumption by the
+% endogenous grid method. Interpolation is made by cubic spline method. 
+%---------------------------------------------------------------------------------------------------------------------------
 %% Auxilary matrices of transition probabilities (for the next period)
 %---------------------------------------------------------------------------------------------------------------------------
 %   For low agg. + low idios. shocks

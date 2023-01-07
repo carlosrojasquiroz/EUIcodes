@@ -10,7 +10,7 @@ iter=0; % initial iteration
 p.disp1=0; % no display information from the endogenous grid method
 B=m.B; % initial value of betas
 g_a=m.g_a; % initial policy of individual assets
-load ss0.mat dist;
+load ss0.mat dist;  % results from Aiyagari without aggregate shocks
 a_cross=dist; % initial distribution of individual assets
 %--------------------------------------------------------------------------------------------------------------------------    
 %% Algorithm
@@ -71,18 +71,20 @@ while dif_B>p.tol
 % To ensure that initial capital distribution comes from the ergodic set, we use the terminal 
 % distribution of the current iteration as initial distribution for a subsequent iteration. 
 % When the solution is sufficiently accurate, dif_B<p.tol, we stop such an updating 
-% and hold the distribution "s.a_cross_temp" fixed for the rest of iterations. ·
-    if dif_B>p.tol*100
+% and hold the distribution "a_cross_temp" fixed for the rest of iterations. ·
+    %if dif_B>p.tol*100
         a_cross=a_cross_temp;
-    end
+    %end
     B=Bx*p.update_B+B*(1-p.update_B); % update the vector of the ALM coefficients 
     if p.disp2==1
-        disp(['-----> ...Done! Tolerance error: ',num2str(dif_B)])
+        disp('------------------------------------------------------------------------------')
+        disp(['Tolerance error: ',num2str(dif_B)])
     end
 end
 endtime=toc;
 if p.disp2==1
-    disp(['-------> Time to execute the algorithm ',num2str(endtime)])
+    disp('------------------------------------------------------------------------------')
+    disp(['Time to execute the algorithm ',num2str(endtime)])
     disp('------------------------------------------------------------------------------')
 end
 %--------------------------------------------------------------------------------------------------------------------------

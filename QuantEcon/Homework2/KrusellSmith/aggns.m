@@ -1,5 +1,10 @@
 function [K_ts,a_cross] =aggns(p,m,g_a,a_cross)
 %---------------------------------------------------------------------------------------------------------------------------
+% This function runs the non-stochastic simulation of the model (a la
+% Young). Note that we require parameters, matrices, policy function for
+% assets and an initial distribution in order to obtain the time-series of
+% aggregate capital and the distribution of (individual) assets. 
+%---------------------------------------------------------------------------------------------------------------------------
 %% Setting matrices
 %---------------------------------------------------------------------------------------------------------------------------
 % Time series of the mean of capital distribution
@@ -23,9 +28,9 @@ a_dist_h=zeros(p.simulT,p.intp);
 % Initial-period assets distributions
 %---------------------------------------------------------------------------------------------------------------------------
 % for the low idiosyncratic shock
-a_dist_l(1,1:p.intp)=[a_cross(1,1:p.intp-1) 1-sum(a_cross(1,1:p.intp-1))];
+a_dist_l(1,1:p.intp)=a_cross(1,:);
 % for the high idiosyncratic shock
-a_dist_h(1,1:p.intp)=[a_cross(2,1:p.intp-1) 1-sum(a_cross(2,1:p.intp-1))]; 
+a_dist_h(1,1:p.intp)=a_cross(2,:);
 %---------------------------------------------------------------------------------------------------------------------------
 % Grid for the assets distribution
 %---------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +53,6 @@ for t=1:p.simulT
     K_ts(t)=K_ts(t)*(K_ts(t)>=p.K_min)*(K_ts(t)<=p.K_max)+p.K_min*(K_ts(t)<p.K_min)+...
        p.K_max*(K_ts(t)>p.K_max);
 % Prices
-    %[rg_ts(t),w_ts(t)]=prices(p,K_ts(t),L_ts(t),Z_ts(t));
     rg_ts(t)=p.alpha*Z_ts(t)*(K_ts(t)/L)^(p.alpha-1)-p.delta;
     w_ts(t)=(1-p.alpha)*Z_ts(t)*(K_ts(t)/L)^p.alpha;
 %--------------------------------------------------------------------------------------------------------------------------
@@ -164,13 +168,10 @@ for t=1:p.simulT
         Ph=(g(1,2)*Fl+g(2,2)*Fh)/(g(1,2)+g(2,2));   
 % low idiosyncratic productivity shocks
        a_dist_l(t+1,1)=Pl(1,1); % probability of having a=p.a_min at t+1
-       a_dist_l(t+1,2:p.intp-1)=Pl(2:p.intp-1,1)'-Pl(1:p.intp-2,1)'; % probabilities of different grid points kvalues
-       a_dist_l(t+1,p.intp)=1-sum(a_dist_l(t+1,1:p.intp-1)); % probability of a=p.a_max is set so that 
-   % "a_dist_l" is normalized to one     
+       a_dist_l(t+1,2:p.intp)=Pl(2:p.intp,1)'-Pl(1:p.intp-1,1)';
 % high idiosyncratic productivity shocks 
        a_dist_h(t+1,1)=Ph(1,1); 
-       a_dist_h(t+1,2:p.intp-1)=Ph(2:p.intp-1,1)'-Ph(1:p.intp-2,1)';
-       a_dist_h(t+1,p.intp)=1-sum(a_dist_h(t+1,1:p.intp-1));
+       a_dist_h(t+1,2:p.intp)=Ph(2:p.intp,1)'-Ph(1:p.intp-1,1)';
     end
 end
 %--------------------------------------------------------------------------------------------------------------------------
