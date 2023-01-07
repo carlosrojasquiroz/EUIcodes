@@ -42,7 +42,7 @@ $$
 \beta_0=[\log(\bar{K}),0,\log(\bar{K}),0]
 $$
 
-On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV.
+On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV. It is important to highlight that I also took as references lectures notes from Makoto Nakajima, Toshihiko Mukoyama and Johannes Wieland, as well as files and documentation of the "JEDC comparison project" from Wouter J. den Haan's website. 
 
 
 ## Matrix of transition probabilities
@@ -53,3 +53,7 @@ $$
 \Pi
 = \Pi_Z \otimes \Pi_z
 $$
+
+## Solution
+
+The algorithm took 9.1012 seconds to obtain a solution of the model (after 43 iterations). Solutions are saved in the object `KSsolution.mat`.
