@@ -56,4 +56,4 @@ $$
 
 ## Solution
 
-The algorithm took 9.1012 seconds to obtain a solution of the model (after 43 iterations). Solutions are saved in the object `KSsolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf in the previous folder. 
+The algorithm took 9.1012 seconds to obtain a solution of the model (after 43 iterations). Solutions are saved in the object `KSsolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf` in the previous folder. 
