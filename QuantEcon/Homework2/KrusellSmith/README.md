@@ -38,9 +38,9 @@ This code follows closely Maliar, Maliar, and Valli (2010, JEDC), but with some 
 - The number of assets grids points for getting the optimal policy functions is 200. It increases to 500 when I compute the nonstochastic simulation. 
 - The initial values of $\beta$ are equal to 
 $$
-\beta_0=[\log(\bar{K}) \ 0 \ \log(\bar{K}) \ 0]
+\beta_0=[\log(\bar{K})  0  \log(\bar{K})  0]
 $$
-On the other hand, I calibrate $\xi=0.3$ (updating parameter for the coefficients B in the ALM).
+On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients B in the ALM).
 
 
 ## Matrix of transition probabilities
