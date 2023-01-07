@@ -34,7 +34,7 @@ Policy functions are obtained by endogenous grid method and the model is solved 
 
 This code follows closely Maliar, Maliar, and Valli (2010, JEDC), but with some differences. For instance: 
 - Instead of using the initial distribution of assets proposed in MMV, I use the distribution from the solution of Aiyagari's model without aggregate uncertainty.
-- The grid for aggregate capital is linearly-spaced, while for assets is log-spaced. The minimum and maximum values of aggregate capital are equal to $0.5 \times \bar{K}$ and $1.5 \times \bar{K}$, where $\bar{K}$ is the mean of capital obtained in the baseline model of Aiyagari without aggregate uncertainty. 
+- The grid for aggregate capital is linearly-spaced, while for assets is log-spaced. The minimum and maximum values of aggregate capital are equal to $0.5 \times \bar{K}$ and $1.5 \times \bar{K}$, where $\bar{K}$ is the mean of capital from the baseline model of Aiyagari without aggregate uncertainty. 
 - The number of assets grids points for getting the optimal policy functions is 200. It increases to 500 when I compute the nonstochastic simulation. 
 - The initial values of $\beta$ are equal to: 
 
@@ -42,10 +42,12 @@ $$
 \beta_0=[\log(\bar{K}),0,\log(\bar{K}),0]
 $$
 
-On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM).
+On the other hand, I calibrate $\chi=0.3$ (updating parameter for the coefficients $\beta$ in the ALM), as in MMV.
 
 
 ## Matrix of transition probabilities
+
+The matrix of transition probabilities, $\Pi$, contains probabilities of aggregate and idiosyncratic shocks in the future, given the current state. For instance, $\Pi(1,1)=P_{LL^{\prime}ll^{\prime}}$ is the probability of facing low aggregate and idiosyncratic shocks the next period, given that today the economy faces low aggregate and idiosyncratic shocks, while $\Pi(3,2) is the probability of having  
 
 $$
 \Pi
