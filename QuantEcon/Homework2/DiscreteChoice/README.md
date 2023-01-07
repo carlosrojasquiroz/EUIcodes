@@ -32,3 +32,19 @@ The calibration is as follows: $\beta=0.96, \ \sigma=1.0, \ B=0, \ \phi=0.75, \ 
 Policy functions are obtained by value function iteration. The `master.m` file also plots figures of the value and policy functions. If you want to deactivate this option then set `p.fig=0` in the file `parameters.m`.
 
 This code works with external functions `logsumexp.m` and `softmax.m`, written by Nick Highman (see [here](https://it.mathworks.com/matlabcentral/fileexchange/84892-logsumexp-softmax)). 
+
+## Details
+
+- I used as a reference the slides from Bence Bardoczy. You can find it in the folder PDFs. 
+- **Important!** I used a grid for assets with 5000 points (five times the number proposed in the homework) in order to find finer policy functions.
+
+## Code
+
+Note that we can run three different models with the same code according with the calibration in the file `parameters.m`: 
+- If we set `p.phi=0` and `p.evind=0`, then we obtain policy functions from the standard incomplete markets model
+- If we set `p.phi>0` and `p.evind=0`, then we work with a model with incomplete markets and discrete choice on labor suuply
+- If we set `p.phi>0` and `p.evind=1`, then we add a extreme value (taste) shock to the previous problem
+
+## Solution
+
+The algorithm took 9.1012 seconds to obtain a solution of the model (after 43 iterations). Solutions are saved in the object `DChoicesolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf` in the previous folder. 
