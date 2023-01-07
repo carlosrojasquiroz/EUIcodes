@@ -36,21 +36,8 @@ This code follows closely Maliar, Maliar, and Valli (2010, JEDC).
 
 ## Matrix of transition probabilities
 
-    $$
-    \Pi=
-    \begin{bmatrix}
-    \pi_{Z_bZ_b^\prime z_bz_b^\prime} & \pi_{Z_bZ_b^\prime z_bz_g^\prime} & \pi_{Z_bZ_g^\prime z_bz_b^\prime} & \pi_{Z_bZ_g^\prime z_bz_g^\prime}\\
-    \pi_{Z_bZ_b^\prime z_gz_b^\prime} & \pi_{Z_bZ_b^\prime z_gz_g^\prime} & \pi_{Z_bZ_g^\prime z_gz_b^\prime} & \pi_{Z_bZ_g^\prime z_gz_g^\prime}\\
-    \pi_{Z_gZ_b^\prime z_bz_b^\prime} & \pi_{Z_gZ_b^\prime z_bz_g^\prime} & \pi_{Z_gZ_g^\prime z_bz_b^\prime} & \pi_{Z_gZ_g^\prime z_bz_g^\prime}\\
-    \pi_{Z_gZ_b^\prime z_gz_b^\prime} & \pi_{Z_gZ_b^\prime z_gz_g^\prime} & \pi_{Z_gZ_g^\prime z_gz_b^\prime} & \pi_{Z_gZ_g^\prime z_gz_g^\prime}
-    \end{bmatrix}
-    $$
-    $$
-    \Pi=    \begin{bmatrix}
-    0.45 &	0.05 &	0.45 &	0.05 \\
-    0.05 &	0.45 &	0.05 &	0.45 \\
-    0.09 &	0.01 &	0.81 &	0.09 \\
-    0.01 &	0.09 &	0.09 &	0.81
-    \end{bmatrix}
-    $$
+$$
+\Pi
+= \Pi_Z \otimes \Pi_z
+$$
 
