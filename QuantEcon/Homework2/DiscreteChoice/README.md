@@ -51,7 +51,7 @@ Note that we can run three different models with the same code according with th
 The algorithm took:
 
 - 19.6714 seconds to obtain policy functions (after 45 iterations) for the standard incomplete markets model
-- 108.8429 seconds to obtain policy functions (after 264 iterations) for model with incomplete markets and discrete choice on labor supply
-- 106.2008 seconds  to obtain policy functions (after 264 iterations) for model with extreme value (taste) shocks 
+- 108.8429 seconds to obtain policy functions (after 264 iterations) for the model with incomplete markets and discrete choice on labor supply
+- 106.2008 seconds  to obtain policy functions (after 264 iterations) for the model with extreme value (taste) shocks 
 
 Solutions are saved in the object `DChoicesolution.mat`. You can find a presentation with main results in the file `Homework2_CRQ.pdf` in the previous folder. 
