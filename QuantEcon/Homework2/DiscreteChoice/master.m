@@ -2,9 +2,9 @@ clc,close,clear;
 %---------------------------------------------------------------------------------------------------------------------------
 %% SIM with discrete choice
 %---------------------------------------------------------------------------------------------------------------------------
-% This code solves the standard incomplete markets model (SIM) with discrete
-% choice (working or not) and extreme value shocks by VFI algorithm. 
-% The current version of the model doesn't have idiosyncratic shocks. 
+% This code obtains policy functions of the standard incomplete markets model 
+% (SIM) with discrete choice (working or not) and extreme value shocks by VFI 
+% algorithm. The current version of the model doesn't have idiosyncratic shocks. 
 %---------------------------------------------------------------------------------------------------------------------------
 %% 1. Parameters
 %---------------------------------------------------------------------------------------------------------------------------
