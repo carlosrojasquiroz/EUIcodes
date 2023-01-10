@@ -76,4 +76,4 @@ p.algo=3; o3T=estimationoptw(p,d,r3T); o3T.standerr=inferenceopt(d,p,o3T);
 % 6.2.3 solver: patternsearch
 p.algo=4; o4T=estimationoptw(p,d,r4T); o4T.standerr=inferenceopt(d,p,o4T);
 %---------------------------------------------------------------------------------------------------------------------------
-                                % (c) Carlos Rojas Quiroz - January 2022
+                                % (c) Carlos Rojas Quiroz - 16.01.2023
